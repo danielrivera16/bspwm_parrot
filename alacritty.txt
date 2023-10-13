@@ -1,0 +1,13 @@
+apt list --upgradable
+parrot-upgrade
+apt install -y cmake pkg-config libfreetype6-dev libfontconfig1-dev xcli
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh\
+
+git clone https://github.com/alacritty/alacritty.git
+cd alacritty
+cargo build --release
+sudo cp target/release/alacritty /usr/local/bin/
+sudo desktop-file-install alacritty.desktop
+sudo desktop-file-install alacritty
+cd ~/.local/share/applications/
+nvim alacritty.desktop
