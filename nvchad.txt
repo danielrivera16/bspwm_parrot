@@ -1,0 +1,21 @@
+→ROOT
+sudo su 
+apt install npm
+npm install tree-sitter-cli@0.16.3
+apt remove --purge neovim
+https://github.com/neovim/neovim/wiki/Installing-Neovim
+mv nvim-linux64.tar.gz /opt/ 
+rm -rf ~/.config/nvim
+rm -rf ~/.local/share/nvim
+git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
+cd /opt/nvim-linux64/bin/
+./nvim
+
+#despues de esto agregamos la ubicacion del ejecutable al $PATH
+→/opt/nvim-linux64/bin/
+
+→USER
+rm -rf ~/.config/nvim
+git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 
+nvim
+
